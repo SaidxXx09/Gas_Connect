@@ -6,7 +6,9 @@ const About = () => {
     return (
         <section className="about-us" id="nosotros">
             <div className="container about-grid">
-                <div className="about-content">
+                
+                {/* 1. El bloque de texto entra desde la izquierda */}
+                <div className="about-content" data-aos="fade-right">
                     <h2 className="section-title">Sobre Nosotros</h2>
                     <p>
                         En GasConnect, nos dedicamos a llevar gas de manera rápida, segura y eficiente hasta donde estés.
@@ -19,9 +21,11 @@ const About = () => {
                     </p>
                 </div>
 
-                <div className="about-image">
+                {/* 2. La imagen entra desde la derecha con un ligero zoom */}
+                <div className="about-image" data-aos="fade-left" data-aos-delay="200">
                     <img src={TruckImage2} alt="Camión de GasConnect en la ciudad" loading="lazy"/>
                 </div>
+                
             </div>
         </section>
     );
