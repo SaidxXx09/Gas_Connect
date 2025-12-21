@@ -1,57 +1,41 @@
 import React from 'react';
-import './Services.css';
-import IconFast from '../../assets/rayo-Photoroom.png';
-import IconTrack from '../../assets/ubicacion-Photoroom.png';
-import IconSecure from '../../assets/candado-Photoroom.png';
+import './Hero.css';
+import TruckImage from '../../assets/camion-grande-Photoroom.png';
+import Girl from '../headergirl/Girl';
 
-const Services = () => {
+const Hero = () => {
     return (
-        <section className="services-section bg-dark" id="servicios">
-            <div className="container">
-                {/* El título y subtítulo aparecen suavemente hacia arriba */}
-                <h2 className="section-title text-center text-light" data-aos="fade-up">
-                    Nuestros Servicios de Entrega
-                </h2>
-                <h4 className="services-subtitle text-center" data-aos="fade-up" data-aos-delay="200">
-                    Con GasConnect, olvídate de las esperas largas y aburridas. Te llevamos gas de forma rápida y segura.
-                </h4>
+        <main className="hero" id="inicio">
+            <div className="container hero-grid">
+                {/* 1. El texto entra desde la izquierda */}
+                <div className="hero-text-content" data-aos="fade-right">
+                    <h2>Llevamos gas <br /><span className="text-highlight"><Girl/></span></h2>
+                    <a href="#servicios" className="btn btn--primary">Pedir Gas Ahora</a>
+                </div>
 
-                <div className="services-grid">
+                {/* 2. El camión entra desde la derecha con un ligero zoom */}
+                <div className="hero-image" data-aos="fade-left" data-aos-duration="1500">
+                    <img src={TruckImage} alt="Logo animado de GasConnect" loading="eager"/>
+                </div>
 
-                    {/* Tarjeta 1: Aparece primero */}
-                    <article className="service-card" data-aos="fade-up" data-aos-delay="300">
-                        <div className="card-icon">
-                            <img src={IconFast} alt="Icono de entrega rápida" loading="lazy"/>
-                        </div>
-                        <h3 className="card-title">Entrega Rápida a Domicilio</h3>
-                        <p className="card-description">Solicita tu cilindro de gas y recíbelo en la puerta de tu casa o negocio en minutos.</p>
-                        <a href="#" className="btn btn--secondary">Pedir Gas Ahora</a>
-                    </article>
-
-                    {/* Tarjeta 2: Aparece con 500ms de retraso */}
-                    <article className="service-card" data-aos="fade-up" data-aos-delay="500">
-                        <div className="card-icon">
-                            <img src={IconTrack} alt="Icono de mapa con ubicación" loading="lazy"/>
-                        </div>
-                        <h3 className="card-title">Seguimiento en Tiempo Real</h3>
-                        <p className="card-description">Observa el recorrido de tu pedido y el tiempo estimado de llegada en la aplicación.</p>
-                        <a href="#" className="btn btn--secondary">Seguimiento Ahora</a>
-                    </article>
-
-                    {/* Tarjeta 3: Aparece con 700ms de retraso */}
-                    <article className="service-card" data-aos="fade-up" data-aos-delay="700">
-                        <div className="card-icon">
-                            <img src={IconSecure} alt="Icono de pago seguro" loading="lazy"/>
-                        </div>
-                        <h3 className="card-title">Pagos Seguros y Programados</h3>
-                        <p className="card-description">Paga con tarjeta o efectivo. Programa tus entregas para que nunca te quedes sin gas.</p>
-                        <a href="#" className="btn btn--secondary">Opciones de Pago</a>
-                    </article>
-
+                <div className="hero-features">
+                    {/* 3. Las tarjetas aparecen de abajo hacia arriba con retrasos (delay) */}
+                    <div className="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <i className='bx bx-timer'></i>
+                        <p>Rápido</p>
+                    </div>
+                    <div className="feature-card" data-aos="fade-up" data-aos-delay="400">
+                        <i className='bx bx-shield'></i>
+                        <p>Confiable</p>
+                    </div>
+                    <div className="feature-card" data-aos="fade-up" data-aos-delay="600">
+                        <i className='bx bx-time-five'></i>
+                        <p>24/7</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </main>
     );
 };
 
-export default Services;
+export default Hero;
