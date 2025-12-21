@@ -8,12 +8,18 @@ const Services = () => {
     return (
         <section className="services-section bg-dark" id="servicios">
             <div className="container">
-                <h2 className="section-title text-center text-light">Nuestros Servicios de Entrega</h2>
-                <h4 className="services-subtitle text-center">Con GasConnect, olvídate de las esperas largas y aburridas. Te llevamos gas de forma rápida y segura.</h4>
+                {/* El título y subtítulo aparecen suavemente hacia arriba */}
+                <h2 className="section-title text-center text-light" data-aos="fade-up">
+                    Nuestros Servicios de Entrega
+                </h2>
+                <h4 className="services-subtitle text-center" data-aos="fade-up" data-aos-delay="200">
+                    Con GasConnect, olvídate de las esperas largas y aburridas. Te llevamos gas de forma rápida y segura.
+                </h4>
 
                 <div className="services-grid">
 
-                    <article className="service-card">
+                    {/* Tarjeta 1: Aparece primero */}
+                    <article className="service-card" data-aos="fade-up" data-aos-delay="300">
                         <div className="card-icon">
                             <img src={IconFast} alt="Icono de entrega rápida" loading="lazy"/>
                         </div>
@@ -22,7 +28,8 @@ const Services = () => {
                         <a href="#" className="btn btn--secondary">Pedir Gas Ahora</a>
                     </article>
 
-                    <article className="service-card">
+                    {/* Tarjeta 2: Aparece con 500ms de retraso */}
+                    <article className="service-card" data-aos="fade-up" data-aos-delay="500">
                         <div className="card-icon">
                             <img src={IconTrack} alt="Icono de mapa con ubicación" loading="lazy"/>
                         </div>
@@ -31,7 +38,8 @@ const Services = () => {
                         <a href="#" className="btn btn--secondary">Seguimiento Ahora</a>
                     </article>
 
-                    <article className="service-card">
+                    {/* Tarjeta 3: Aparece con 700ms de retraso */}
+                    <article className="service-card" data-aos="fade-up" data-aos-delay="700">
                         <div className="card-icon">
                             <img src={IconSecure} alt="Icono de pago seguro" loading="lazy"/>
                         </div>
