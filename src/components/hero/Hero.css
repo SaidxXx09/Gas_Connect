@@ -8,6 +8,14 @@
     color: var(--c1);
     text-align: center;
 }
+
+.text-highlight{
+    font-size: 3.5rem;
+    display: block;
+    min-height: 3.5rem;
+
+}
+
 .hero-image img{
     padding: 2.5rem;
     max-width: 100%;
@@ -66,3 +74,5 @@
         font-size: 2rem;
     }
 }
+
+
