@@ -6,20 +6,23 @@ const Footer = () => {
         <footer className="main-footer bg-dark">
             <div className="container footer-grid">
 
-                <div className="footer-block footer-contact-info">
+                {/* Bloque 1: Contacto */}
+                <div className="footer-block footer-contact-info" data-aos="fade-up" data-aos-delay="100">
                     <h3 className="footer-title">Contacto</h3>
                     <p className="call">(593) 995644186</p>
                     <p className="write">GasConnect@gmail.com</p>
                 </div>
 
-                <div className="footer-block footer-links">
+                {/* Bloque 2: Enlaces - Aparece un poco después */}
+                <div className="footer-block footer-links" data-aos="fade-up" data-aos-delay="300">
                     <h3 className="footer-title">Enlaces de interés</h3>
                     <a href="#">Soporte técnico</a>
                     <a href="#">Blog de noticias</a>
                     <a href="#">Preguntas frecuentes (FAQ)</a>
                 </div>
 
-                <div className="footer-block footer-social">
+                {/* Bloque 3: Redes Sociales - Aparece al último */}
+                <div className="footer-block footer-social" data-aos="fade-up" data-aos-delay="500">
                     <h3 className="footer-title">Síguenos</h3>
                     <div className="social-icons">
                         <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
@@ -30,7 +33,8 @@ const Footer = () => {
 
             </div>
 
-            <div className="footer-copy">
+            {/* El copyright aparece fijo al final */}
+            <div className="footer-copy" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">
                 <hr/>
                 <p>© 2024 GasConnect. Derechos Reservados.</p>
             </div>
