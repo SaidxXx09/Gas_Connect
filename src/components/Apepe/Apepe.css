@@ -2,34 +2,53 @@
     padding: 6rem 0;
     background-color: var(--c6);
 }
+
 .app-grid {
     display: flex;
     flex-direction: column;
     gap: 4rem;
     align-items: center;
 }
-.app-grid img:first-child {
-    max-width: 80%;
+
+.app-phone-image {
+    max-width: 250px; 
     height: auto;
     border-radius: 2rem;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    animation: floatAnimation 4s ease-in-out infinite;
 }
+
 .app-content {
     text-align: center;
-    display: block;
+    width: 100%;
 }
+
 .app-description {
     margin-bottom: 3rem;
 }
-.app-content a img {
+
+.app-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.app-buttons a img {
     height: 5rem;
     width: auto;
     cursor: pointer;
-    transition: opacity var(--transition);
-    margin: 0 0.75rem;
+    transition: transform 0.3s ease, opacity var(--transition);
 }
-.app-content a img:hover {
+
+.app-buttons a img:hover {
     opacity: 0.8;
+    transform: scale(1.05);
+}
+
+@keyframes floatAnimation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
 }
 
 @media (min-width: 992px) {
@@ -40,13 +59,14 @@
     }
     .app-content {
         flex: 1;
-        padding-top: 5rem;
     }
-    .app-grid img:first-child {
+    .app-phone-image {
         order: -1;
-        flex: 1;
     }
     .app-content {
         text-align: left;
+    }
+    .app-buttons {
+        justify-content: flex-start;
     }
 }
