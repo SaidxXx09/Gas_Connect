@@ -14,6 +14,7 @@ const Apepe = () => {
     return (
         <section className="app-promo container" id="app">
             <div className="app-grid">
+                {/* 1. El teléfono entra con un giro 3D (flip) */}
                 <img 
                     src={PhoneImage} 
                     width="300" 
@@ -21,9 +22,12 @@ const Apepe = () => {
                     alt="Teléfono mostrando la aplicación GasConnect" 
                     loading="lazy"
                     className="app-phone-image"
+                    data-aos="flip-left"
+                    data-aos-duration="1500"
                 />
 
-                <div className="app-content">
+                {/* 2. El contenido del Swiper entra desde la derecha */}
+                <div className="app-content" data-aos="fade-left" data-aos-delay="300">
                     <Swiper
                         modules={[Autoplay, Pagination]}
                         spaceBetween={20}
@@ -37,10 +41,21 @@ const Apepe = () => {
                                 Con nuestra app, puedes programar la entrega de gas a domicilio fácilmente.
                             </p>
                             <div className="app-buttons">
-                                <a href="https://play.google.com/store/games?device=windows" target="_blank" rel="noreferrer" aria-label="Descargar en Google Play">
+                                {/* Los botones tienen un zoom individual para resaltar */}
+                                <a href="https://play.google.com/store/games?device=windows" 
+                                   target="_blank" 
+                                   rel="noreferrer" 
+                                   aria-label="Descargar en Google Play"
+                                   data-aos="zoom-in"
+                                   data-aos-delay="600">
                                     <img src={GooglePlay} alt="Logo Google Play" loading="lazy"/>
                                 </a>
-                                <a href="https://www.apple.com/la/app-store/" target="_blank" rel="noreferrer" aria-label="Descargar en App Store">
+                                <a href="https://www.apple.com/la/app-store/" 
+                                   target="_blank" 
+                                   rel="noreferrer" 
+                                   aria-label="Descargar en App Store"
+                                   data-aos="zoom-in"
+                                   data-aos-delay="800">
                                     <img src={AppStore} alt="Logo App Store" loading="lazy"/>
                                 </a>
                             </div>
