@@ -40,4 +40,5 @@ const Contact = () => {
     );
 };
 
-export default Contact; About;
+export default Contact;
+
